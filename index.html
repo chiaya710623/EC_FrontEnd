@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Book Store</title>
+  <base href="/EC_frontend/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <!--//tags -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+  <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css" media="screen" />
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+  <!-- //for bootstrap working -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+    rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <!-- js -->
+  <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+  <!-- //js -->
+  <script src="assets/js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 4
+      $("#slider3").responsiveSlides({
+        auto: true,
+        pager: true,
+        nav: false,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+    });
+  </script>
+  <script src="assets/js/modernizr.custom.js"></script>
+  <!-- Custom-JavaScript-File-Links -->
+  <!-- script for responsive tabs 商品詳細資訊 -->
+  <script src="assets/js/easy-responsive-tabs.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#horizontalTab').easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion
+        width: 'auto', //auto or any width like 600px
+        fit: true,   // 100% fit in a container
+        closed: 'accordion', // Start closed if in accordion view
+        activate: function (event) { // Callback function if tab is switched
+          var $tab = $(this);
+          var $info = $('#tabInfo');
+          var $name = $('span', $info);
+          $name.text($tab.text());
+          $info.show();
+        }
+      });
+      $('#verticalTab').easyResponsiveTabs({
+        type: 'vertical',
+        width: 'auto',
+        fit: true
+      });
+    });
+  </script>
+  <!-- //script for responsive tabs 商品詳細資訊 -->
+  <!-- FlexSlider -->
+  <script src="assets/js/jquery.flexslider.js"></script>
+  <script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+      $('.flexslider').flexslider({
+        animation: "slide",
+        controlNav: "thumbnails"
+      });
+    });
+  </script>
+  <!-- //FlexSlider-->
+  <!-- stats -->
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/jquery.countup.js"></script>
+  <script>
+    $('.counter').countUp();
+  </script>
+  <!-- //stats -->
+  <!-- start-smoth-scrolling -->
+  <script type="text/javascript" src="assets/js/move-top.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+      });
+    });
+  </script>
+  <!-- 右下角的箭頭 -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+      $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+  </script>
+  <!-- //右下角的箭頭 -->
+  <!-- for bootstrap working -->
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
+
+</html>
