@@ -1,8 +1,8 @@
 
-# 全端系統開發與設計 作業
+# 全端系統開發與設計 個人作品
 
 master：原始碼 <br>
-gh-pages：網站本人（ https://chiaya710623.github.io/FrontEnd/ ）
+gh-pages：網站本人（ https://chiaya710623.github.io/EC_frontend/ ）
 
  <br>
 
